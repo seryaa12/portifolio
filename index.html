@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarcísio Carneiro | Portfólio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container container">
+            <div class="logo">Tarcísio Carneiro</div>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <button class="theme-toggle" id="themeToggle">🌙</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home">
+        <div class="hero-content container" data-aos="fade-up">
+            <h1>Tarcísio Carneiro</h1>
+            <p class="tagline">Conhecimento & Criatividade em Desenvolvimento</p>
+            <p class="sub-tagline">Desenvolvedor Full Stack & Mobile</p>
+            <a href="#portfolio" class="btn">Ver Meus Projetos</a>
+            <a href="#contact" class="btn btn-outline">Entrar em Contato</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 data-aos="fade-up">Sobre Mim</h2>
+            <div class="about-content">
+                <div data-aos="fade-right">
+                    <div class="profile-img-placeholder">
+                        <i class="fas fa-user fa-5x"></i>
+                        <p>Adicione sua foto aqui</p>
+                    </div>
+                </div>
+                <div class="about-text" data-aos="fade-left">
+                    <h3>Desenvolvedor & Apaixonado por Tecnologia</h3>
+                    <p>Desde muito novo já tinha um contato intenso com computadores, smartphones e video games. Hoje em
+                        dia prefiro o computador, mas já fui da época de preferir consoles e jogos. Minha paixão por
+                        tecnologia é ampla - não me prendo apenas ao desenvolvimento de sites e aplicativos, gosto de
+                        tudo um pouco!</p>
+
+                    <p>Minha jornada inclui o <strong>técnico em Informática pelo SENAC RJ</strong>, onde aprendi desde
+                        manutenção de computadores até desenvolvimento com Ionic. Atualmente estou cursando
+                        <strong>Análise e Desenvolvimento de Sistemas (ADS)</strong>, aprofundando meus conhecimentos em
+                        programação.</p>
+
+                    <p>Além do desenvolvimento, tenho experiência em <strong>suporte técnico</strong> e posso ser aquele
+                        "carinha do bairro que conserta até impressoras"! Me importo muito com a documentação e os
+                        detalhes do que faço, sempre buscando registrar e compartilhar conhecimento.</p>
+
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Cursando ADS</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Desenvolvimento Mobile</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-laptop-code"></i>
+                            <span>Full Stack em Formação</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-tools"></i>
+                            <span>Suporte Técnico</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 data-aos="fade-up">Minhas Habilidades</h2>
+            <div class="skills-container">
+                <!-- Front-end -->
+                <div class="skill-card" data-aos="flip-left">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>Front-end</h3>
+                    <p>HTML5, CSS3, JavaScript ES6+</p>
+                    <div class="skill-level">
+                        <div class="level-bar">
+                            <div class="level-progress" style="width: 85%"></div>
+                        </div>
+                        <span>85%</span>
+                    </div>
+                </div>
+
+                <!-- Back-end -->
+                <div class="skill-card" data-aos="flip-left" data-aos-delay="50">
+                    <div class="skill-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Back-end</h3>
+                    <p>Node.js, Express, APIs REST</p>
+                    <div class="skill-level">
+                        <div class="level-bar">
+                            <div class="level-progress" style="width: 60%"></div>
+                        </div>
+                        <span>60%</span>
+                    </div>
+                </div>
+
+                <!-- Frameworks -->
+                <div class="skill-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="skill-icon">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <h3>Frameworks</h3>
+                    <p>React, React Native, Ionic, Vue.js</p>
+                    <div class="skill-level">
+                        <div class="level-bar">
+                            <div class="level-progress" style="width: 75%"></div>
+                        </div>
+                        <span>75%</span>
+                    </div>
+                </div>
+
+                <!-- Mobile -->
+                <div class="skill-card" data-aos="flip-left" data-aos-delay="150">
+                    <div class="skill-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile</h3>
+                    <p>Apps nativos e híbridos</p>
+                    <div class="skill-level">
+                        <div class="level-bar">
+                            <div class="level-progress" style="width: 70%"></div>
+                        </div>
+                        <span>70%</span>
+                    </div>
+                </div>
+
+                <!-- Ferramentas -->
+                <div class="skill-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="skill-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Ferramentas</h3>
+                    <p>Git, VS Code, Figma, NPM, Yarn</p>
+                    <div class="skill-level">
+                        <div class="level-bar">
+                            <div class="level-progress" style="width: 80%"></div>
+                        </div>
+                        <span>80%</span>
+                    </div>
+                </div>
+
+                <!-- Bancos de Dados -->
+                <div class="skill-card" data-aos="flip-left" data-aos-delay="250">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Banco de Dados</h3>
+                    <p>MySQL, MongoDB, Firebase</p>
+                    <div class="skill-level">
+                        <div class="level-bar">
+                            <div class="level-progress" style="width: 65%"></div>
+                        </div>
+                        <span>65%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="technologies" data-aos="fade-up">
+                <h3>Tecnologias que utilizo:</h3>
+                <div class="tech-list">
+                    <span class="tech-item">HTML5</span>
+                    <span class="tech-item">CSS3</span>
+                    <span class="tech-item">JavaScript</span>
+                    <span class="tech-item">TypeScript</span>
+                    <span class="tech-item">React</span>
+                    <span class="tech-item">React Native</span>
+                    <span class="tech-item">Ionic</span>
+                    <span class="tech-item">Vue.js</span>
+                    <span class="tech-item">Node.js</span>
+                    <span class="tech-item">Express</span>
+                    <span class="tech-item">MySQL</span>
+                    <span class="tech-item">MongoDB</span>
+                    <span class="tech-item">Firebase</span>
+                    <span class="tech-item">Git</span>
+                    <span class="tech-item">GitHub</span>
+                    <span class="tech-item">Figma</span>
+                    <span class="tech-item">VS Code</span>
+                    <span class="tech-item">NPM</span>
+                    <span class="tech-item">Yarn</span>
+                    <span class="tech-item">REST APIs</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="container">
+            <h2 data-aos="fade-up">Meus Projetos</h2>
+            <div class="portfolio-grid">
+                <!-- Projeto 1: App Ionic -->
+                <div class="portfolio-item" data-aos="zoom-in">
+                    <div class="portfolio-img">
+                        <i class="fas fa-mobile-alt fa-3x"></i>
+                        <h3>App Ionic</h3>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Aplicativo Ionic - Curso Técnico SENAC</h3>
+                        <p>Aplicativo mobile desenvolvido durante o curso técnico em informática no SENAC RJ usando
+                            Ionic Framework. Projeto com documentação completa incluindo funcionalidades de cadastro,
+                            listagem e gerenciamento de dados com interface moderna e responsiva.</p>
+
+                        <div class="project-features">
+                            <h4>Funcionalidades:</h4>
+                            <ul>
+                                <li>Interface mobile-first</li>
+                                <li>Integração com APIs REST</li>
+                                <li>Gestão de estado com serviços</li>
+                                <li>Design responsivo e acessível</li>
+                                <li>Navegação entre páginas</li>
+                            </ul>
+                        </div>
+
+                        <div class="tech-tags">
+                            <span class="tech-tag">Ionic</span>
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">RxJS</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/serya012/ionic5" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 2: Relógio Digital -->
+                <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="portfolio-img">
+                        <i class="fas fa-clock fa-3x"></i>
+                        <h3>Relógio Digital</h3>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Relógio Digital Interativo</h3>
+                        <p>Relógio digital moderno desenvolvido com JavaScript puro. Permite personalização em tempo
+                            real do fundo com degradê entre duas cores selecionadas pelo usuário. Projeto totalmente
+                            documentado com explicações sobre o código e funcionalidades implementadas.</p>
+
+                        <div class="project-features">
+                            <h4>Funcionalidades:</h4>
+                            <ul>
+                                <li>Tempo em tempo real com Date()</li>
+                                <li>Seletor de cores personalizado</li>
+                                <li>Efeitos de degradê dinâmico com CSS</li>
+                                <li>Interface intuitiva e responsiva</li>
+                                <li>Modo claro/escuro integrado</li>
+                            </ul>
+                        </div>
+
+                        <div class="tech-tags">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">Canvas</span>
+                            <span class="tech-tag">LocalStorage</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> Código
+                            </a>
+                            <a href="#" class="project-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                            <a href="#" class="project-link" target="_blank">
+                                <i class="fas fa-book"></i> Documentação
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 3: App React Native -->
+                <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="portfolio-img">
+                        <i class="fab fa-react fa-3x"></i>
+                        <h3>React Native</h3>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Aplicativo React Native - Faculdade</h3>
+                        <p>Aplicativo mobile em desenvolvimento para projeto da faculdade utilizando React Native.
+                            Inclui features modernas como navegação entre telas, consumo de APIs e interface nativa para
+                            Android e iOS. Documentação técnica detalhada disponível.</p>
+
+                        <div class="project-features">
+                            <h4>Funcionalidades:</h4>
+                            <ul>
+                                <li>Multiplataforma (iOS/Android)</li>
+                                <li>Navegação com React Navigation</li>
+                                <li>Integração com APIs REST</li>
+                                <li>UI/UX moderna com componentes</li>
+                                <li>Estado gerenciado com Context API</li>
+                            </ul>
+                        </div>
+
+                        <div class="tech-tags">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">API REST</span>
+                            <span class="tech-tag">Context API</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> Código
+                            </a>
+                            <a href="#" class="project-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                            <a href="#" class="project-link" target="_blank">
+                                <i class="fas fa-book"></i> Documentação
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 data-aos="fade-up">Vamos Conversar?</h2>
+            <div class="contact-container">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>Entre em Contato</h3>
+                    <p>Estou disponível para freelances, projetos interessantes e novas oportunidades de trabalho. Vamos
+                        criar algo incrível juntos!</p>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <strong>Email</strong>
+                            <p>ayrescarneiro01@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <strong>Telefone</strong>
+                            <p>(21) 97880-7854</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <strong>Localização</strong>
+                            <p>RJ, Brasil</p>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h4>Minhas Redes:</h4>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/tarcisio-ayres012/" class="social-link"
+                                title="LinkedIn" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/serya012" class="social-link" title="GitHub" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.instagram.com/tserya12/" class="social-link" title="Instagram"
+                                target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link" title="WhatsApp" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" data-aos="fade-left">
+                    <div class="form-group">
+                        <label for="name">Seu Nome</label>
+                        <input type="text" id="name" placeholder="Digite seu nome completo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Seu Email</label>
+                        <input type="email" id="email" placeholder="seu.email@exemplo.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Assunto</label>
+                        <div class="custom-select">
+                            <select id="subject" name="subject" required>
+                                <option value="">Selecione o assunto...</option>
+                                <option value="orcamento">💰 Cotar orçamento de projeto</option>
+                                <option value="desenvolvimento-web">🌐 Desenvolvimento Web</option>
+                                <option value="desenvolvimento-mobile">📱 Desenvolvimento Mobile</option>
+                                <option value="suporte-tecnico">🔧 Suporte Técnico</option>
+                                <option value="manutencao">🛠️ Manutenção de Sistemas</option>
+                                <option value="consultoria">💼 Consultoria em TI</option>
+                                <option value="freelance">🚀 Projeto Freelance</option>
+                                <option value="oportunidade">💼 Oportunidade de Trabalho</option>
+                                <option value="parceria">🤝 Proposta de Parceria</option>
+                                <option value="duvida">❓ Dúvida Técnica</option>
+                                <option value="outros">📄 Outros</option>
+                            </select>
+                            <div class="select-arrow">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Sua Mensagem</label>
+                        <textarea id="message" rows="6" placeholder="Conte-me sobre seu projeto ou oportunidade..."
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-full">
+                        <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Tarcísio Carneiro</h3>
+                    <p>Desenvolvedor Full Stack & Mobile</p>
+                </div>
+
+                <div class="footer-links">
+                    <a href="#home">Início</a>
+                    <a href="#about">Sobre</a>
+                    <a href="#portfolio">Projetos</a>
+                    <a href="#contact">Contato</a>
+                </div>
+
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/tarcisio-ayres012/"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/serya012"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/tserya12/"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; Tarcísio Carneiro. Todos os direitos reservados.</p>
+                <p>Desenvolvido com ❤️ e muito código</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
