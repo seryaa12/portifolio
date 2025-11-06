@@ -639,7 +639,7 @@ class ContactFormSystem {
         
         // Validação final
         if (!this.validateForm(formData)) return;
-        
+        //TESTAR
         await this.submitForm(formData, form);
     }
 
@@ -698,7 +698,7 @@ class ContactFormSystem {
             submitBtn.disabled = true;
 
             console.log('📤 Enviando dados:', formData);
-
+            //TESTAR
             // ENVIO VIA EMAILJS
             await emailjs.send(
                 PORTFOLIO_CONFIG.EMAILJS.SERVICE_ID,
