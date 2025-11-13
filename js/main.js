@@ -245,9 +245,9 @@ class ContactFormSystem {
             // ✅ SUAS CONFIGURAÇÕES ORIGINAIS
             emailjs.init("IHYyQz4Gbk-EPOTil");
             this.emailjsInitialized = true;
-            console.log('✅ EmailJS inicializado!');
+            console.log('✅ EmailJS pronto!');
         } catch (error) {
-            console.error('❌ Erro ao inicializar EmailJS:', error);
+            console.error('❌ Erro ao iniciar EmailJS:', error);
             this.emailjsInitialized = false;
         }
     }
@@ -640,7 +640,7 @@ class PortfolioApp {
         // Marcar como carregado
         document.body.classList.add('loaded');
 
-        console.log('✅ Portfólio inicializado com sucesso!');
+        console.log('✅ Portfólio iniciado com sucesso!');
     }
 
     updateCurrentYear() {
