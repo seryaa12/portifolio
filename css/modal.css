@@ -1,0 +1,393 @@
+/* ===== MODAL MANUTENÇÃO - PALETA DO SITE ===== */
+.maintenance-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.maintenance-modal.active {
+    display: flex;
+}
+
+.maintenance-content {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    padding: 3rem 2.5rem;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 90%;
+    border: 2px solid var(--accent);
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.5),
+        0 0 80px rgba(138, 43, 226, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.maintenance-content h1 {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 2;
+}
+
+.maintenance-content p {
+    font-size: clamp(1rem, 3.5vw, 1.2rem);
+    margin-bottom: 1.5rem;
+    opacity: 0.95;
+    line-height: 1.6;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+}
+
+.maintenance-content strong {
+    color: var(--accent);
+    font-weight: 700;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* DESKTOP: Ícones enfileirados */
+.maintenance-social {
+    display: flex;
+    justify-content: center;
+    gap: clamp(0.75rem, 3vw, 1rem);
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
+
+.maintenance-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(44px, 10vw, 50px);
+    height: clamp(44px, 10vw, 50px);
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-size: clamp(1.1rem, 3.5vw, 1.3rem);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Feixe de luz corrigido */
+.maintenance-social a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.6),
+        transparent
+    );
+    transform: skewX(-15deg);
+    transition: left 0.8s ease;
+    z-index: 1;
+}
+
+.maintenance-social a:hover {
+    transform: translateY(-8px) scale(1.15);
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.4),
+        0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+.maintenance-social a:hover::before {
+    left: 150%;
+}
+
+/* Cores específicas para cada rede social */
+.maintenance-social a:nth-child(1) { /* LinkedIn */
+    background: rgba(0, 119, 181, 0.2);
+    border-color: rgba(0, 119, 181, 0.4);
+}
+
+.maintenance-social a:nth-child(1):hover {
+    background: #0077b5;
+    border-color: #0077b5;
+    box-shadow: 0 15px 30px rgba(0, 119, 181, 0.4);
+}
+
+.maintenance-social a:nth-child(2) { /* GitHub */
+    background: rgba(51, 51, 51, 0.2);
+    border-color: rgba(51, 51, 51, 0.4);
+}
+
+.maintenance-social a:nth-child(2):hover {
+    background: #333;
+    border-color: #333;
+    box-shadow: 0 15px 30px rgba(51, 51, 51, 0.4);
+}
+
+.maintenance-social a:nth-child(3) { /* Instagram */
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.maintenance-social a:nth-child(3):hover {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    border-color: transparent;
+    box-shadow: 0 15px 30px rgba(220, 39, 67, 0.4);
+}
+
+.maintenance-social a:nth-child(4) { /* WhatsApp */
+    background: rgba(37, 211, 102, 0.2);
+    border-color: rgba(37, 211, 102, 0.4);
+}
+
+.maintenance-social a:nth-child(4):hover {
+    background: #25D366;
+    border-color: #25D366;
+    box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+}
+
+/* Quando em manutenção, esconder conteúdo principal */
+body.maintenance-active main,
+body.maintenance-active footer,
+body.maintenance-active nav {
+    display: none !important;
+}
+
+body.maintenance-active .maintenance-modal {
+    display: flex !important;
+}
+
+/* Animações responsivas */
+.maintenance-modal.active .maintenance-content {
+    animation: modalSlideIn 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-60px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Efeito de brilho sutil no fundo do modal */
+.maintenance-content::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.1) 0%,
+        transparent 70%
+    );
+    animation: rotate 15s linear infinite;
+    z-index: 1;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Garantir que o conteúdo fique acima do efeito de brilho */
+.maintenance-content h1,
+.maintenance-content p,
+.maintenance-content strong,
+.maintenance-social {
+    position: relative;
+    z-index: 2;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+
+/* MOBILE: 2x2 apenas em telas menores */
+@media (max-width: 768px) {
+    .maintenance-content {
+        padding: 2.5rem 2rem;
+        margin: 1rem;
+        width: 85%;
+    }
+
+    /* MUDANÇA CRÍTICA: Grid 2x2 apenas no mobile */
+    .maintenance-social {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 2 colunas */
+        gap: 1rem;
+        max-width: 180px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .maintenance-social a {
+        width: 48px;
+        height: 48px;
+        font-size: 1.2rem;
+        margin: 0 auto; /* Centraliza na grid */
+    }
+}
+
+/* Mobile Large */
+@media (max-width: 480px) {
+    .maintenance-content {
+        padding: 2rem 1.5rem;
+        margin: 0.5rem;
+        width: 90%;
+        border-radius: 16px;
+    }
+
+    .maintenance-content h1 {
+        margin-bottom: 1rem;
+    }
+
+    .maintenance-content p {
+        margin-bottom: 1rem;
+        line-height: 1.5;
+    }
+
+    .maintenance-social {
+        grid-template-columns: 1fr 1fr; /* Mantém 2x2 */
+        gap: 0.8rem;
+        max-width: 160px;
+        margin-top: 1.5rem;
+    }
+
+    .maintenance-social a {
+        width: 44px;
+        height: 44px;
+        font-size: 1.1rem;
+    }
+
+    .maintenance-social a:hover {
+        transform: translateY(-5px) scale(1.1);
+    }
+}
+
+/* Mobile Small */
+@media (max-width: 360px) {
+    .maintenance-content {
+        padding: 1.5rem 1rem;
+        border-radius: 14px;
+    }
+
+    .maintenance-social {
+        grid-template-columns: 1fr 1fr; /* Mantém 2x2 */
+        gap: 0.6rem;
+        max-width: 140px;
+    }
+
+    .maintenance-social a {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+
+/* Orientação Landscape - Mantém 2x2 no mobile */
+@media (max-width: 768px) and (max-height: 500px) and (orientation: landscape) {
+    .maintenance-modal {
+        padding: 0.5rem;
+        align-items: flex-start;
+        overflow-y: auto;
+    }
+
+    .maintenance-content {
+        margin: 1rem 0;
+        padding: 1.5rem 1rem;
+    }
+
+    .maintenance-content h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .maintenance-content p {
+        font-size: 0.9rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .maintenance-social {
+        grid-template-columns: 1fr 1fr; /* Mantém 2x2 */
+        gap: 0.8rem;
+        max-width: 140px;
+        margin-top: 1rem;
+    }
+}
+
+/* DESKTOP: Mantém enfileirado (já é o padrão) */
+@media (min-width: 769px) {
+    .maintenance-social {
+        display: flex; /* Já é o padrão, mas reforça */
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+}
+
+/* Telas muito grandes - Mantém enfileirado */
+@media (min-width: 1440px) {
+    .maintenance-content {
+        max-width: 550px;
+        padding: 3.5rem 3rem;
+    }
+
+    .maintenance-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .maintenance-content p {
+        font-size: 1.3rem;
+    }
+
+    .maintenance-social {
+        display: flex; /* Garante que fique enfileirado */
+        gap: 1.5rem;
+    }
+
+    .maintenance-social a {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+}
+
+/* Acessibilidade - Redução de movimento */
+@media (prefers-reduced-motion: reduce) {
+    .maintenance-modal.active .maintenance-content,
+    .maintenance-social a,
+    .maintenance-content::after {
+        animation: none;
+        transition: none;
+    }
+
+    .maintenance-social a:hover {
+        transform: none;
+    }
+    
+    .maintenance-social a::before {
+        display: none;
+    }
+}

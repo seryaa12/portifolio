@@ -9,25 +9,55 @@
         content="Portfólio de Tarcísio Carneiro - Desenvolvedor Full Stack & Mobile especializado em React, Node.js e desenvolvimento de aplicações web e mobile">
     <meta name="keywords" content="desenvolvedor, full stack, mobile, react, node.js, javascript, portfolio">
     <meta name="author" content="Tarcísio Carneiro">
-    <script src="../js/switch.js"></script>
-    <link rel="stylesheet" href="../css/variables.css">
-    <link rel="stylesheet" href="../css/accessibility.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/sections.css">
-    <link rel="stylesheet" href="../css/about.css">
-    <link rel="stylesheet" href="../css/skills.css">
-    <link rel="stylesheet" href="../css/portfolio.css">
-    <link rel="stylesheet" href="../css/contact.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/utilities.css">
-    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/accessibility.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    
 </head>
 
 <body>
-    <!-- Skip link para acessibilidade -->
-    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    <!-- MODAL DE MANUTENÇÃO COM GRADIENTE INSTAGRAM -->
+    <div id="maintenanceModal" class="maintenance-modal">
+        <div class="maintenance-content">
+            <h1>🚧 Site em Manutenção</h1>
+            <p>Estamos realizando atualizações para melhorar sua experiência. Volte em breve!</p>
+            <p><strong>Enquanto isso, me acompanhe nas redes:</strong></p>
+
+            <div class="maintenance-social">
+                <a href="https://www.linkedin.com/in/tarcisio-ayres012/" title="LinkedIn" target="_blank"
+                    rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/serya012" title="GitHub" target="_blank" rel="noopener noreferrer"
+                    aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/tserya12/" title="Instagram" target="_blank"
+                    rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/5521978807854" title="WhatsApp" target="_blank" rel="noopener noreferrer"
+                    aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Navigation -->
     <nav aria-label="Navegação principal">
@@ -98,7 +128,6 @@
 
     <main id="main-content">
         <!-- About Section -->
-        <!-- About Section -->
         <section id="about">
             <div class="container">
                 <h2 data-aos="fade-up">Sobre Mim</h2>
@@ -112,7 +141,7 @@
                             aplicativos, gosto de tudo um pouco!</p>
                         <p>
                             Minha jornada inclui o <strong>técnico em Informática pelo SENAC RJ</strong>, onde aprendi
-                            desde manutenção de computadores até desenvolvimento com Ionic. Atualmente estou cursando
+                            desde manutenção de computadores até desenvolvimento com Ionic. Atualmente estuo cursando
                             <strong>Análise e Desenvolvimento de Sistemas (ADS)</strong>, aprofundando meus
                             conhecimentos na área.
                         </p>
@@ -253,7 +282,6 @@
                             <span>80%</span>
                         </div>
                     </div>
-
 
                     <!-- Habilidade Criativa -->
                     <div class="skill-card" data-aos="flip-left" data-aos-delay="350">
@@ -552,6 +580,7 @@
             </div>
         </section>
     </main>
+
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -588,13 +617,13 @@
             </div>
         </div>
     </footer>
-    
+
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="/js/animations.js"></script>
-    <script src="/js/main.js"></script>
-    <script src="/js/switch.js"></script>
+    <script src="js/switch.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
