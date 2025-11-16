@@ -230,35 +230,30 @@
     
     /* Ícones */
     .nav-links li:nth-child(1) a::before { 
-        content: "🏠"; 
         position: absolute; 
         left: 15px; 
         top: 50%;
         transform: translateY(-50%);
     }
     .nav-links li:nth-child(2) a::before { 
-        content: "👤"; 
         position: absolute; 
         left: 15px; 
         top: 50%;
         transform: translateY(-50%);
     }
     .nav-links li:nth-child(3) a::before { 
-        content: "💻"; 
         position: absolute; 
         left: 15px; 
         top: 50%;
         transform: translateY(-50%);
     }
     .nav-links li:nth-child(4) a::before { 
-        content: "📁"; 
         position: absolute; 
         left: 15px; 
         top: 50%;
         transform: translateY(-50%);
     }
     .nav-links li:nth-child(5) a::before { 
-        content: "📞"; 
         position: absolute; 
         left: 15px; 
         top: 50%;

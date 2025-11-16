@@ -145,16 +145,42 @@ nav {
 .theme-toggle {
     background: none;
     border: none;
-    font-size: 1.3rem;
     cursor: pointer;
     color: var(--text);
     transition: var(--transition);
     padding: 0.5rem;
     border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
 }
 
 .theme-toggle:hover {
     background: var(--card-bg);
+    transform: scale(1.05);
+}
+
+/* CORREÇÃO PARA BOOTSTRAP ICONS */
+.theme-toggle .bi {
+    font-size: 1.2rem;
+    line-height: 1;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover .bi {
+    transform: scale(1.1);
+}
+
+/* Cores específicas para cada tema */
+.dark-mode .theme-toggle .bi-sun-fill {
+    color: #ffd700; /* Sol dourado no tema escuro */
+}
+
+.theme-toggle .bi-moon-fill {
+    color: var(--text); /* Cor do texto no tema claro */
 }
 
 .mobile-menu-btn {
@@ -168,8 +194,19 @@ nav {
     padding: 0.5rem;
     border-radius: 6px;
     transition: var(--transition);
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
 }
 
 .mobile-menu-btn:hover {
     background: var(--card-bg);
+}
+
+/* Ajuste para ícone do menu mobile */
+.mobile-menu-btn .bi {
+    font-size: 1.3rem;
+    line-height: 1;
+    display: block;
 }

@@ -510,12 +510,21 @@ class ThemeSystem {
 
     setTheme(theme) {
         document.body.classList.toggle('dark-mode', theme === 'dark');
-        this.themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+
+        // Muda apenas a classe do ícone
+        const themeIcon = this.themeToggle.querySelector('.theme-icon');
+        if (theme === 'dark') {
+            themeIcon.classList.remove('bi-moon');
+            themeIcon.classList.add('bi-sun');
+        } else {
+            themeIcon.classList.remove('bi-sun');
+            themeIcon.classList.add('bi-moon');
+        }
+
         this.themeToggle.setAttribute('aria-label',
             theme === 'dark' ? 'Alternar para tema claro' : 'Alternar para tema escuro');
         this.currentTheme = theme;
 
-        // Update navbar background based on theme and scroll
         this.updateNavbarBackground();
     }
 
@@ -555,7 +564,7 @@ class ScrollSystem {
     bindEvents() {
         window.addEventListener('scroll', this.handleScroll, { passive: true });
 
-        // Smooth scroll para links internos
+        // Scroll suave sem alterar URL
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', this.handleSmoothScroll);
         });
@@ -584,15 +593,17 @@ class ScrollSystem {
         if (target) {
             e.preventDefault();
 
+            // Scroll suave
             target.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
             });
 
-            // Update URL without jumping
-            if (history.pushState) {
-                history.pushState(null, null, href);
-            }
+            // ⭐⭐ MUDANÇA CRÍTICA: NÃO atualiza a URL ⭐⭐
+            // Remove estas linhas se existirem:
+            // if (history.pushState) {
+            //     history.pushState(null, null, href);
+            // }
         }
     }
 
