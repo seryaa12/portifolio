@@ -686,17 +686,3 @@ window.addEventListener('beforeunload', () => {
         app.destroy();
     }
 });
-
-// Testa se os arquivos existem
-const icons = [
-    'assets/favicon.ico',
-    'assets/favicon-32x32.png', 
-    'assets/favicon-16x16.png',
-    'assets/apple-touch-icon.png'
-];
-
-icons.forEach(icon => {
-    fetch(icon)
-        .then(response => console.log(`${icon}: ${response.status}`))
-        .catch(error => console.log(`${icon}: ERROR - ${error}`));
-});
