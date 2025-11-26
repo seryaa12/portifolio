@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/serya012/portifolio.git"
+    "url": "git+https://github.com/seryaa12/portifolio.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/serya012/portifolio/issues"
+    "url": "https://github.com/seryaa12/portifolio/issues"
   },
-  "homepage": "https://github.com/serya012/portifolio#readme"
+  "homepage": "https://github.com/seryaa12/portifolio#readme"
 }
