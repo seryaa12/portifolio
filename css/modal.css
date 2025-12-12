@@ -28,7 +28,7 @@
     border: 2px solid var(--accent);
     box-shadow: 
         0 25px 50px rgba(0, 0, 0, 0.5),
-        0 0 80px rgb(137, 43, 226);
+        0 0 800px var(--primary);
     position: relative;
     overflow: hidden;
 }
