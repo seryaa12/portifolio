@@ -1,0 +1,236 @@
+/* ===== SISTEMA DE FONTES DO SITE ===== */
+
+/* 1. VARIÁVEIS PARA CONTROLE */
+:root {
+    /* Tamanhos base - controlam TUDO */
+    --font-size-base: 1rem;               /* 16px padrão */
+    --font-size-scale: 1.2;               /* Fator de escala */
+    
+    /* Cálculo automático dos tamanhos */
+    --font-size-xs: calc(var(--font-size-base) * 0.75);    /* 12px */
+    --font-size-sm: calc(var(--font-size-base) * 0.875);   /* 14px */
+    --font-size-md: var(--font-size-base);                 /* 16px */
+    --font-size-lg: calc(var(--font-size-base) * 1.125);   /* 18px */
+    --font-size-xl: calc(var(--font-size-base) * 1.25);    /* 20px */
+    --font-size-2xl: calc(var(--font-size-base) * 1.5);    /* 24px */
+    --font-size-3xl: calc(var(--font-size-base) * 1.875);  /* 30px */
+    --font-size-4xl: calc(var(--font-size-base) * 2.25);   /* 36px */
+    --font-size-5xl: calc(var(--font-size-base) * 3);      /* 48px */
+    
+    /* Fontes do site - alteráveis via mode.json */
+    --font-logo: 'Dancing Script', cursive;
+    --font-headings: 'Montserrat', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-special: 'Poppins', sans-serif;
+}
+
+/* 2. APLICAÇÃO DAS FONTES NO SITE TODO */
+body {
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+}
+
+/* LOGO - com fonte cursiva especial */
+.logo {
+    font-family: var(--font-logo) !important;
+    font-weight: 700;
+    font-size: var(--font-size-3xl) !important; /* 30px */
+    letter-spacing: 1px;
+}
+
+/* TÍTULOS */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-headings);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: var(--font-size-4xl); /* 36px */
+}
+
+h2 {
+    font-size: var(--font-size-3xl); /* 30px */
+}
+
+h3 {
+    font-size: var(--font-size-2xl); /* 24px */
+}
+
+h4 {
+    font-size: var(--font-size-xl); /* 20px */
+}
+
+/* BOTÕES, LINKS E ELEMENTOS ESPECIAIS */
+.btn, .nav-links a, .project-link, .social-link {
+    font-family: var(--font-special);
+}
+
+/* SEÇÕES ESPECÍFICAS */
+.hero-content .tagline {
+    font-family: var(--font-headings);
+    font-size: var(--font-size-xl);
+}
+
+.hero-content .sub-tagline {
+    font-family: var(--font-body);
+    font-size: var(--font-size-lg);
+}
+
+.skill-card h3, .portfolio-content h3 {
+    font-family: var(--font-headings);
+}
+
+/* 3. CLASSES DE FONTE CURSIVA PARA ELEMENTOS ESPECÍFICOS */
+.font-cursive {
+    font-family: var(--font-logo) !important;
+}
+
+/* Elementos que podem receber fonte cursiva */
+.logo.cursive,
+h1.cursive,
+.tagline.cursive,
+.feature.cursive {
+    font-family: var(--font-logo) !important;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/* 4. CLASSES INDIVIDUAIS PARA CADA FONTE CURSIVA */
+.font-dancing { 
+    font-family: 'Dancing Script', cursive !important;
+    font-size: inherit !important; /* Herda o tamanho do contexto */
+}
+
+.font-great-vibes { 
+    font-family: 'Great Vibes', cursive !important;
+    font-size: inherit !important;
+}
+
+.font-parisienne { 
+    font-family: 'Parisienne', cursive !important;
+    font-size: inherit !important;
+}
+
+.font-pacifico { 
+    font-family: 'Pacifico', cursive !important;
+    font-size: inherit !important;
+}
+
+.font-homemade { 
+    font-family: 'Homemade Apple', cursive !important;
+    font-size: inherit !important;
+}
+
+.font-yellowtail { 
+    font-family: 'Yellowtail', cursive !important;
+    font-size: inherit !important;
+}
+
+.font-bad-script { 
+    font-family: 'Bad Script', cursive !important;
+    font-size: inherit !important;
+}
+
+.font-belle { 
+    font-family: 'La Belle Aurore', cursive !important;
+    font-size: inherit !important;
+}
+
+.font-de-haviland { 
+    font-family: 'Mr De Haviland', cursive !important;
+    font-size: inherit !important;
+}
+
+.font-marck { 
+    font-family: 'Marck Script', cursive !important;
+    font-size: inherit !important;
+}
+
+.font-kaushan { 
+    font-family: 'Kaushan Script', cursive !important;
+    font-size: inherit !important;
+}
+
+.font-alex { 
+    font-family: 'Alex Brush', cursive !important;
+    font-size: inherit !important;
+}
+
+.font-allura { 
+    font-family: 'Allura', cursive !important;
+    font-size: inherit !important;
+}
+
+.font-cedarville { 
+    font-family: 'Cedarville Cursive', cursive !important;
+    font-size: inherit !important;
+}
+
+.font-playball { 
+    font-family: 'Playball', cursive !important;
+    font-size: inherit !important;
+}
+
+.font-qwigley { 
+    font-family: 'Qwigley', cursive !important;
+    font-size: inherit !important;
+}
+
+.font-rouge { 
+    font-family: 'Rouge Script', cursive !important;
+    font-size: inherit !important;
+}
+
+.font-sacramento { 
+    font-family: 'Sacramento', cursive !important;
+    font-size: inherit !important;
+}
+
+.font-satisfy { 
+    font-family: 'Satisfy', cursive !important;
+    font-size: inherit !important;
+}
+
+.font-tangerine { 
+    font-family: 'Tangerine', cursive !important;
+    font-size: inherit !important;
+}
+
+/* 5. CLASSES PARA AUMENTAR/DIMINUIR FONTES */
+.font-small { font-size: var(--font-size-sm) !important; }
+.font-normal { font-size: var(--font-size-base) !important; }
+.font-large { font-size: var(--font-size-lg) !important; }
+.font-xlarge { font-size: var(--font-size-xl) !important; }
+.font-xxlarge { font-size: var(--font-size-2xl) !important; }
+.font-huge { font-size: var(--font-size-3xl) !important; }
+
+/* Tamanhos específicos para o logo */
+.logo.font-large { font-size: var(--font-size-4xl) !important; }
+.logo.font-xlarge { font-size: var(--font-size-5xl) !important; }
+
+/* 6. RESPONSIVO */
+@media (max-width: 768px) {
+    :root {
+        --font-size-base: 0.9375rem; /* 15px em mobile */
+    }
+    
+    .logo {
+        font-size: var(--font-size-2xl) !important; /* 24px em mobile */
+    }
+    
+    h1 {
+        font-size: var(--font-size-3xl); /* 30px em mobile */
+    }
+    
+    h2 {
+        font-size: var(--font-size-2xl); /* 24px em mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --font-size-base: 0.875rem; /* 14px em mobile pequeno */
+    }
+}
