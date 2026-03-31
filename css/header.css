@@ -91,9 +91,9 @@ nav {
 
 .nav-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 1rem 20px;
+    align-items: baseline;
+    justify-content: space-between;
 }
 
 .logo {
