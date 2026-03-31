@@ -1,15 +1,6 @@
-// Animations and AOS initialization
+// Animações simplificadas - Sem AOS
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize AOS (Animate On Scroll)
-    AOS.init({
-        duration: 800,
-        once: true,
-        offset: 100,
-        easing: 'ease-in-out',
-        disable: window.innerWidth < 768
-    });
-
-    // Typing effect for hero section
+    // Efeito de digitação no título
     const tagline = document.querySelector('.tagline');
     if (tagline) {
         const text = tagline.textContent;
@@ -24,11 +15,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         
-        // Start typing after a short delay
         setTimeout(typeWriter, 1000);
     }
 
-    // Skill cards hover effects
+    // Efeitos hover nos cards de habilidades
     const skillCards = document.querySelectorAll('.skill-card');
     skillCards.forEach(card => {
         card.addEventListener('mouseenter', function() {
@@ -40,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Portfolio item interactions
+    // Interações com os itens do portfólio
     const portfolioItems = document.querySelectorAll('.portfolio-item');
     portfolioItems.forEach(item => {
         item.addEventListener('mouseenter', function() {
@@ -51,9 +41,8 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.transform = 'translateY(0)';
         });
 
-        // Click para expandir detalhes (opcional)
         item.addEventListener('click', function(e) {
-            if (e.target.tagName === 'A') return; // Não interferir com links
+            if (e.target.tagName === 'A') return;
             
             const content = this.querySelector('.portfolio-content');
             if (content) {
@@ -62,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Social links animation
+    // Animações dos links sociais
     const socialLinks = document.querySelectorAll('.social-link');
     socialLinks.forEach(link => {
         link.addEventListener('mouseenter', function() {
@@ -74,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Scroll progress indicator
+    // Barra de progresso do scroll
     const createScrollProgress = () => {
         const progressBar = document.createElement('div');
         progressBar.className = 'scroll-progress';
@@ -99,7 +88,6 @@ document.addEventListener('DOMContentLoaded', function() {
             progressBar.style.width = scrollPercent + '%';
         };
 
-        // Throttle the scroll event
         let ticking = false;
         window.addEventListener('scroll', () => {
             if (!ticking) {
@@ -111,14 +99,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }, { passive: true });
 
-        // Initial update
         updateProgress();
     };
 
     createScrollProgress();
 });
 
-// Parallax effect for header
+// Efeito parallax no header
 let ticking = false;
 window.addEventListener('scroll', () => {
     if (!ticking) {
@@ -133,52 +120,3 @@ window.addEventListener('scroll', () => {
         ticking = true;
     }
 }, { passive: true });
-
-// Intersection Observer for elements
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('animate-in');
-            
-            // Animate skill bars
-            if (entry.target.classList.contains('skill-card')) {
-                const progressBar = entry.target.querySelector('.level-progress');
-                if (progressBar) {
-                    const width = progressBar.style.width;
-                    progressBar.style.width = '0%';
-                    setTimeout(() => {
-                        progressBar.style.width = width;
-                    }, 300);
-                }
-            }
-        }
-    });
-}, observerOptions);
-
-// Observe elements for custom animations
-document.addEventListener('DOMContentLoaded', () => {
-    const animateElements = document.querySelectorAll('.skill-card, .portfolio-item, .contact-item');
-    animateElements.forEach(el => observer.observe(el));
-});
-
-// Handle page visibility changes
-document.addEventListener('visibilitychange', function() {
-    if (!document.hidden) {
-        // Page became visible, refresh AOS
-        AOS.refresh();
-    }
-});
-
-// Handle resize events
-let resizeTimeout;
-window.addEventListener('resize', function() {
-    clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(function() {
-        AOS.refresh();
-    }, 250);
-});

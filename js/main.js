@@ -2,8 +2,6 @@
 // SISTEMA PRINCIPAL DO PORTFÓLIO
 // =============================================
 
-
-
 class PhoneMaskSystem {
     constructor(inputElement) {
         this.input = inputElement;
@@ -178,9 +176,6 @@ class MobileMenu {
         this.menuBtn.setAttribute('aria-expanded', 'true');
         this.menuBtn.innerHTML = '<i class="fas fa-times" aria-hidden="true"></i>';
         this.isOpen = true;
-
-        // Trap focus no menu
-        this.trapFocus();
     }
 
     close() {
@@ -190,26 +185,6 @@ class MobileMenu {
         this.menuBtn.setAttribute('aria-expanded', 'false');
         this.menuBtn.innerHTML = '<i class="fas fa-bars" aria-hidden="true"></i>';
         this.isOpen = false;
-    }
-
-    trapFocus() {
-        const focusableElements = this.navLinks.querySelectorAll('a, button');
-        const firstElement = focusableElements[0];
-        const lastElement = focusableElements[focusableElements.length - 1];
-
-        this.navLinks.addEventListener('keydown', (e) => {
-            if (e.key === 'Tab') {
-                if (e.shiftKey && document.activeElement === firstElement) {
-                    e.preventDefault();
-                    lastElement.focus();
-                } else if (!e.shiftKey && document.activeElement === lastElement) {
-                    e.preventDefault();
-                    firstElement.focus();
-                }
-            }
-        });
-
-        firstElement.focus();
     }
 
     destroy() {
@@ -645,7 +620,6 @@ class PortfolioApp {
         this.contactFormSystem.init();
         this.mobileMenu.init();
 
-        // Atualizar ano no footer
         this.updateCurrentYear();
 
         // Marcar como carregado
