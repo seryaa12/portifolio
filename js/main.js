@@ -389,10 +389,9 @@ class ContactFormSystem {
 
             console.log('📝 Parâmetros para template:', templateParams);
 
-            // ✅ SERVICE ID E TEMPLATE ID ORIGINAIS
             await emailjs.send(
-                "service_v7jlvg8",    // Seu Service ID
-                "template_wper866",   // Seu Template ID  
+                "service_v7jlvg8",
+                "template_wper866",
                 templateParams
             );
 
@@ -469,7 +468,6 @@ class ThemeSystem {
     bindEvents() {
         this.themeToggle.addEventListener('click', this.handleClick);
 
-        // Listen for system theme changes
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
             if (!localStorage.getItem('theme')) {
                 this.setTheme(e.matches ? 'dark' : 'light');
@@ -486,7 +484,6 @@ class ThemeSystem {
     setTheme(theme) {
         document.body.classList.toggle('dark-mode', theme === 'dark');
 
-        // Muda apenas a classe do ícone
         const themeIcon = this.themeToggle.querySelector('.theme-icon');
         if (theme === 'dark') {
             themeIcon.classList.remove('bi-moon');
@@ -539,7 +536,6 @@ class ScrollSystem {
     bindEvents() {
         window.addEventListener('scroll', this.handleScroll, { passive: true });
 
-        // Scroll suave sem alterar URL
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', this.handleSmoothScroll);
         });
@@ -568,17 +564,10 @@ class ScrollSystem {
         if (target) {
             e.preventDefault();
 
-            // Scroll suave
             target.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
             });
-
-            // ⭐⭐ MUDANÇA CRÍTICA: NÃO atualiza a URL ⭐⭐
-            // Remove estas linhas se existirem:
-            // if (history.pushState) {
-            //     history.pushState(null, null, href);
-            // }
         }
     }
 
@@ -622,7 +611,6 @@ class PortfolioApp {
 
         this.updateCurrentYear();
 
-        // Marcar como carregado
         document.body.classList.add('loaded');
 
         console.log('✅ Portfólio iniciado com sucesso!');
@@ -654,7 +642,6 @@ document.addEventListener('DOMContentLoaded', () => {
     app.init();
 });
 
-// Cleanup na unload da página
 window.addEventListener('beforeunload', () => {
     if (app) {
         app.destroy();
