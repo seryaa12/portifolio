@@ -125,3 +125,23 @@
     color: white;
     transform: translateY(-1px);
 }
+
+.deploy-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--primary);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    font-size: 1.3rem;
+    border-bottom-left-radius: 6px;
+    z-index: 2;
+    letter-spacing: 0.4px;
+    font-weight: 500;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-item {
+    position: relative;
+    /* garante que o selo fique dentro dos limites do card */
+}
