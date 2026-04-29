@@ -1,22 +1,5 @@
-// Animações simplificadas - Sem AOS
+// Animações simplificadas - Sem máquina de escrever
 document.addEventListener('DOMContentLoaded', function() {
-    // Efeito de digitação no título
-    const tagline = document.querySelector('.tagline');
-    if (tagline) {
-        const text = tagline.textContent;
-        tagline.textContent = '';
-        let i = 0;
-        
-        function typeWriter() {
-            if (i < text.length) {
-                tagline.textContent += text.charAt(i);
-                i++;
-                setTimeout(typeWriter, 50);
-            }
-        }
-        
-        setTimeout(typeWriter, 1000);
-    }
 
     // Efeitos hover nos cards de habilidades
     const skillCards = document.querySelectorAll('.skill-card');
